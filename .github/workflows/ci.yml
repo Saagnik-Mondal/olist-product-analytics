@@ -1,0 +1,23 @@
+name: CI
+
+# Re-runs the whole analysis from scratch to prove the results are reproducible.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.12
+      - run: uvx ruff check .
+      - run: uv sync --python 3.12
+      - run: uv run python analysis/download_data.py
+      - run: uv run python analysis/run.py > /dev/null
+      - run: uv run python analysis/charts.py
+      - run: uv run python analysis/sizing.py > /dev/null
+      - name: Results must match the committed ones
+        run: git diff --exit-code results/

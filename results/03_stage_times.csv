@@ -1,0 +1,3 @@
+delivery,orders,purchase_to_approval_days,seller_handoff_days,carrier_transit_days,total_days,promised_days
+on time,88630,0.01,1.75,6.92,9.7,23.3
+late,7825,0.02,3.01,23.92,29.2,22.2
