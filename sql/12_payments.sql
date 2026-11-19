@@ -1,7 +1,7 @@
 -- Q12. How do customers pay? Payment type mix and installment use (by order's main payment).
 WITH main_payment AS (
     SELECT order_id, payment_type, payment_installments, payment_value,
-           row_number() OVER (PARTITION BY order_id ORDER BY payment_value DESC) AS rk
+           row_number() OVER (PARTITION BY order_id ORDER BY payment_value DESC, payment_sequential) AS rk
     FROM payments
     WHERE payment_type <> 'not_defined'
 )

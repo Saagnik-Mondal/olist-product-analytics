@@ -7,7 +7,12 @@ WITH ordered AS (
         cu.customer_unique_id AS cust,
         o.order_id,
         o.order_purchase_timestamp AS ts,
-        row_number() OVER (PARTITION BY cu.customer_unique_id ORDER BY o.order_purchase_timestamp) AS rn
+        -- order_id breaks ties when a customer has two orders at the same instant, so the
+        -- result is identical on every machine.
+        row_number() OVER (
+            PARTITION BY cu.customer_unique_id
+            ORDER BY o.order_purchase_timestamp, o.order_id
+        ) AS rn
     FROM orders o
     JOIN customers cu USING (customer_id)
     WHERE o.order_status NOT IN ('canceled', 'unavailable')

@@ -25,9 +25,9 @@ That is a 14% relative drop in 1-2 star reviews. It is an upper bound: late orde
 
 New customers who ordered by 2018-02-28, repeat within 180 days:
 
-- First order on time: **3.18%** (1,620 of 51,010)
-- First order late: **2.72%** (114 of 4,185)
-- Difference: **+0.45 percentage points** (95% CI -0.06 to +0.97), two-sided p = **0.11**.
+- First order on time: **3.18%** (1,622 of 51,012)
+- First order late: **2.70%** (113 of 4,184)
+- Difference: **+0.48 percentage points** (95% CI -0.04 to +0.99), two-sided p = **0.09**.
 
 The difference is not statistically significant at the 5% level, so this data cannot confirm that lateness drives churn. Only about 3% of customers return either way, so low repeat purchase looks like a separate problem.
 

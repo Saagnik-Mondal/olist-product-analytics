@@ -6,7 +6,7 @@ I analysed about 100,000 real orders (2016 to 2018) from [Olist](https://www.kag
 
 ## The answer in one paragraph
 
-Late delivery is the biggest fixable driver of unhappy customers. Only about 8% of orders arrive after the promised date, but those orders produce **34% of all 1-2 star reviews**. Satisfaction does not decline gently: it **falls off a cliff once an order is 4 or more days late** (61 to 79% of those orders get 1-2 stars, versus 19% at 1 to 3 days late). The delay builds up in the **carrier leg, not at the seller**, and it is concentrated in a few large states (Rio de Janeiro, Bahia, Ceará, Maranhão). Separately, **97% of customers never order a second time**, and the data does not show that lateness is the cause, so retention needs its own investigation.
+Late delivery is the biggest fixable driver of unhappy customers. Only about 8% of orders arrive after the promised date, but those orders produce **34% of all 1-2 star reviews**. Satisfaction does not decline gently: it **falls off a cliff once an order is 4 or more days late** (61 to 79% of those orders get 1-2 stars, versus 19% at 1 to 3 days late). The delay builds up in the **carrier leg, not at the seller**, and it is concentrated in a few large states (Rio de Janeiro, Bahia, Ceará, Maranhão). Separately, **97% of customers never order a second time**, and a late first delivery moves that by only about half a percentage point, so retention needs its own investigation.
 
 ## Key findings
 
@@ -19,7 +19,7 @@ Late delivery is the biggest fixable driver of unhappy customers. Only about 8% 
 | 5 | A few large states are the problem | Late rate: MA 19.7%, CE 15.3%, BA 14.0%, RJ 13.5% (12,350 orders) vs SP 5.9% and PR 5.0%. |
 | 6 | Delivery promises are padded | On-time orders arrive in a median 9.7 days but were promised in 23.3. 74% of reviewed orders arrive 7+ days early. |
 | 7 | Bad sellers are not the main cause | The worst 10% of sellers (by late rate) are 19.0% late vs 7.3% for the rest, but account for only 14.3% of all late orders. |
-| 8 | Repeat purchase is very low | 96.96% of customers placed one order. Repeat within 180 days: 3.18% (first order on time) vs 2.72% (late), a difference that is **not** statistically significant (p = 0.11). |
+| 8 | Repeat purchase is very low | 96.96% of customers placed one order. Repeat within 180 days: 3.18% (first order on time) vs 2.70% (late). The gap points the expected way but is small (0.5 points) and **not** statistically significant at the 5% level (p = 0.09). |
 | 9 | Sales depend on few sellers | The top 10% of sellers bring in 67.6% of GMV. |
 
 ![Satisfaction by delivery timing](charts/02_delay_vs_reviews.png)
@@ -44,7 +44,7 @@ Caveat: reviews arrive after delivery, so this metric lags. A leading indicator 
 | 2 | **Fix the carrier leg in MA, CE, BA and RJ.** Review carrier performance by lane and test alternatives. | Transit time is where late orders lose their days (finding 4), and late rates in these states are roughly 2 to 4 times those of the best states. | Same pool as above. This is the lever that removes lateness rather than managing it. | Carrier pilot on one lane, measure late rate and happy order rate. |
 | 3 | **Set promise dates by state.** Tighten the padded promise where late rates are low (SP, MG, PR) and widen it where they are high. | Median promise is 23.3 days vs 9.7 delivered (finding 6). | Not sizeable here: the data has no traffic or conversion events, so the effect on checkout conversion is unknown. | A/B test the displayed delivery date. Primary metric: conversion. Guardrail: late rate. |
 | 4 | **Add seller handoff alerts.** | Sellers missed the handoff deadline in 27.2% of late orders (finding 4). | Limited: the worst 10% of sellers account for 14.3% of late orders (finding 7). | Alert sellers 24 hours before the deadline; compare missed-deadline rates. |
-| 5 | **Treat retention as a separate research project.** | 97% buy once, and lateness does not explain it (finding 8). | Not sized. | Customer interviews and a post-purchase survey first, then test a re-engagement message. |
+| 5 | **Treat retention as a separate research project.** | 97% buy once, and the gap between on-time and late first orders is only about 0.5 points (finding 8), so lateness cannot explain it. | Not sized. | Customer interviews and a post-purchase survey first, then test a re-engagement message. |
 
 Priority reasoning: recommendations 1 and 2 are the largest measured effect with the clearest mechanism. Recommendation 3 may matter most commercially but cannot be sized from this data, so it comes after a plan to collect conversion data.
 

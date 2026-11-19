@@ -6,7 +6,7 @@ WITH s AS (
     GROUP BY seller_id
 ),
 ranked AS (
-    SELECT gmv, ntile(10) OVER (ORDER BY gmv DESC) AS decile FROM s
+    SELECT gmv, ntile(10) OVER (ORDER BY gmv DESC, seller_id) AS decile FROM s
 )
 SELECT
     decile,

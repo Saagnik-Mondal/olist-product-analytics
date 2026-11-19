@@ -17,7 +17,7 @@ seller_stats AS (
 ),
 ranked AS (
     SELECT *, late_orders * 1.0 / orders AS late_rate,
-           ntile(10) OVER (ORDER BY late_orders * 1.0 / orders DESC) AS late_decile
+           ntile(10) OVER (ORDER BY late_orders * 1.0 / orders DESC, seller_id) AS late_decile
     FROM seller_stats
 )
 SELECT
