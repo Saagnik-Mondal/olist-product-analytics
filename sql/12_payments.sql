@@ -14,4 +14,4 @@ SELECT
 FROM main_payment
 WHERE rk = 1
 GROUP BY payment_type
-ORDER BY orders DESC;
+ORDER BY orders DESC, payment_type;

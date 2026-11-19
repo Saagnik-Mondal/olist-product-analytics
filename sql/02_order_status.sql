@@ -5,4 +5,4 @@ SELECT
     round(100.0 * count(*) / sum(count(*)) OVER (), 2) AS pct
 FROM orders
 GROUP BY order_status
-ORDER BY orders DESC;
+ORDER BY orders DESC, order_status;

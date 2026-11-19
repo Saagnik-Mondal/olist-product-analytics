@@ -13,5 +13,5 @@ LEFT JOIN categories c USING (product_category_name)
 LEFT JOIN order_review r USING (order_id)
 LEFT JOIN delivered d USING (order_id)
 GROUP BY 1
-ORDER BY gmv_brl DESC
+ORDER BY gmv_brl DESC, category
 LIMIT 15;

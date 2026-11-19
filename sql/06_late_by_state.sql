@@ -10,4 +10,4 @@ FROM delivered d
 LEFT JOIN order_review r USING (order_id)
 GROUP BY d.state
 HAVING count(*) >= 500
-ORDER BY late_pct DESC;
+ORDER BY late_pct DESC, d.state;
